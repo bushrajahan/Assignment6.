@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css"
+    rel="stylesheet"
+    type="text/css"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="collapse bg-base-200">
+        <input type="radio" name="my-accordion-1" checked="checked" /> 
+        <div class="collapse-title text-xl font-medium">
+            <p>In JavaScript, var, let, and const are used to declare variables, but they differ in terms of their scope and hoisting behavior.</p>
+        
+        </div>
+        <div class="collapse-content"> 
+          <p>var has function scope, which means that a variable declared with var is accessible within the function it is declared in or any nested functions. Additionally, var variables are hoisted to the top of their scope, so they can be accessed before they are declared.
+
+            let and const, on the other hand, have block scope, which means that a variable declared with let or const is only accessible within the block it is declared in (e.g. a loop or an if statement). let and const variables are not hoisted, so they cannot be accessed before they are declared.
+            
+            One key difference between let and const is that let variables can be reassigned, while const variables cannot be reassigned once they are initialized. However, the value of a const variable can still be mutated if it is an object or an array.</p>
+        </div>
+      </div>
+      <div class="collapse bg-base-200">
+        <input type="radio" name="my-accordion-1" /> 
+        <div class="collapse-title text-xl font-medium">
+            In JavaScript, null and undefined are both used to represent the absence of a value, but they are used in slightly different ways.
+
+
+        </div>
+        <div class="collapse-content"> 
+          <p>common use cases for undefined include:
+
+            Checking if a variable has been initialized: If a variable has not been initialized, its value will be undefined.
+            Checking if a function has returned a value: If a function does not return anything, its return value will be undefined.</p>
+            <p>Some common use cases for null include:
+
+                Explicitly setting a variable to have no value: If you want to explicitly set a variable to have no value, you can assign it the value null.
+                Checking if an object exists: If you are checking whether an object exists or not, you can compare it to null.</p>
+        
+        </div>
+      </div>
+      <div class="collapse bg-base-200">
+        <input type="radio" name="my-accordion-1" /> 
+        <div class="collapse-title text-xl font-medium">
+            REST stands for Representational State Transfer.
+        </div>
+        <div class="collapse-content"> 
+          <p>A RESTful API is an architectural style for building web services that use HTTP requests to access and manipulate data. REST APIs are designed to be simple, lightweight, and scalable, making them a popular choice for building APIs on the web.</p>
+        </div>
+      </div>
+</body>
+</html>

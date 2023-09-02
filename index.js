@@ -24,7 +24,7 @@ const buttons = async() =>{
 
 
 //creating buttons 
-const catagory = (catagories) =>{
+const catagory = (catagories ) =>{
   const buttonContainer = document.getElementById('button-container');
   let count =0;
   catagories.forEach(item=>{
@@ -61,7 +61,7 @@ const catagory = (catagories) =>{
 }
   
    
-
+  
    
  
   //now making card and also make catagory wise card 
@@ -163,6 +163,6 @@ const catagory = (catagories) =>{
 
 
 
-
+cardContainer(1000)
 
 buttons();
