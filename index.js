@@ -152,6 +152,25 @@ const catagory = (catagories ) =>{
   
     }
 
+    const sort = document.getElementById('sort');
+    sort?.addEventListener('click',()=>{
+      const cardContainer = document.getElementById('card-container');
+      console.log(cardContainer.children)
+      const cards =[...cardContainer.children];
+      cards.sort((a,b)=>{
+        const aViews = parseInt(a.querySelector('#view').textContent);
+        const bViews = parseInt(b.querySelector('#view').textContent);
+        return bViews -aViews;
+      });
+      cards.forEach((card)=>
+         cardContainer?.appendChild(card)
+      )
+
+      })
+    
+   
+  
+    
 
     
 
