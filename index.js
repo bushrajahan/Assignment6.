@@ -5,12 +5,23 @@ const buttons = async() =>{
   //  console.log(data.data)
   const catagories = data.data;
   // console.log(catagory)
-  const item = data;
+  const items = data.data;
+
     catagory(catagories);
     console.log(data)
 
-    
+
 }
+
+  let x=false;
+  const sortButton = document.getElementById('sort');
+  sortButton?.addEventListener('click',  () => {
+       x=true;
+       console.log(x);
+  })
+  // Re-append the sorted card elements to the container
+
+
 
 //creating buttons 
 const catagory = (catagories) =>{
@@ -20,51 +31,53 @@ const catagory = (catagories) =>{
        ++count;
       //  console.log(item.category_id)
      const div = document.createElement('div');
-     
+
      
      div.innerHTML=`
      
      <button  id="button${count}" class="btn normal-case  active:bg-red-600">${item.category}</button>
-     
+       
      `
-      
+   
+ 
+
+
      buttonContainer?.appendChild(div);
      const buttonhere = document.getElementById(`button${count}`);
   
      buttonhere?.addEventListener('click',()=>{
       
-         cardContainer(`${item.category_id}`)
+      cardContainer(`${item.category_id}`)
+      // display(`${item.category_id}`)
+     
+
+      //  x(`${item.category_id}`)
          console.log(item.category_id)
      })
    
-
+ 
 
   })
 }
+  
+   
 
-//sorting button 
    
  
   //now making card and also make catagory wise card 
-  const cardContainer= async(id) =>{
+  const cardContainer= async (id) =>{
+    
       const res = await fetch(` https://openapi.programming-hero.com/api/videos/category/${id}`)
       const data = await res.json();
       console.log(data);
-  
-     console.log(data);
 
-      console.log(data.data);
-     
+       const items = data.data;
       const cardContainer = document.getElementById('card-container');
       const nai = document.getElementById('nai-container');
       nai.innerHTML='';
       cardContainer.innerHTML='';
-      const items = data.data;
-      
-        items.sort((a, b) => b.others.views - a.others.views);
-    
-
-
+      // const items = data.data;
+  
 
 
        const r= items.length===0?'':'hidden';
